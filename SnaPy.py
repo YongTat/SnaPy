@@ -19,7 +19,10 @@ def list_filter():
 def file_remove(filename):
     path = get_path()
     fullpath = os.path.join(path, filename)
-    os.remove(fullpath)
+    if os.path.isdir(filename):
+        os.removedirs(fullpath)
+    else:
+        os.remove(fullpath)
 
 def remove_half():
     cwdlist = list_filter()
