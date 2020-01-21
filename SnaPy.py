@@ -31,7 +31,6 @@ def remove_half():
         cwdlist.remove(filetoremove)
 
 def main():
-    list_filter()
     remove_half()
 
 if __name__ == "__main__":
